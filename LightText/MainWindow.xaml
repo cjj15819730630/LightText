@@ -5,8 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LightText"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
     <Grid>
-        
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="光源控制器设置" FontSize="16" FontWeight="Bold" Margin="0,30,0,0"/>
+                <Button Name="SetLightSourceForCS" Width="120" Height="22" FontSize="14" FontWeight="Bold" Margin="102,30,0,0" Background="AliceBlue" Content="应用到光源" Click="btnSetLightSourceForCS_Click"/>
+            </StackPanel>
+
+            <WrapPanel Margin="15,10,10,0" Orientation="Vertical">
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="夹具光源控制器串口名:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceFixtureSerialPortName,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="夹具光源控制器串口配置:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceFixtureSerialPortConfig,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="夹具光源亮度设置:" Width="150" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal" Margin="5,5">
+                        <TextBlock Text="通道1:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceFixture.LightChannelValue1,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道2:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceFixture.LightChannelValue2,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道3:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceFixture.LightChannelValue3,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道4:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceFixture.LightChannelValue4,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="检测光源控制器串口名:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceDetectSerialPortName,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="检测光源控制器串口配置:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceDetectSerialPortConfig,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="检测光源亮度设置:" Width="150" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal" Margin="5,5">
+                        <TextBlock Text="通道1:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceDetect.LightChannelValue1,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道2:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceDetect.LightChannelValue2,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道3:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceDetect.LightChannelValue3,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道4:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceDetect.LightChannelValue4,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="贴膜光源控制器串口名:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceStickingFilmSerialPortName,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="贴膜光源控制器串口配置:" Width="150" FontSize="14"/>
+                    <TextBox Width="160" Margin="10,0" Text="{Binding LightSourceStickingFilmSerialPortConfig,Mode=TwoWay}" FontSize="14"/>
+                </WrapPanel>
+                <WrapPanel Margin="15,10,10,0">
+                    <TextBlock Text="贴膜光源亮度设置:" Width="150" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal" Margin="5,5">
+                        <TextBlock Text="通道1:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceStickingFilm.LightChannelValue1,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道2:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceStickingFilm.LightChannelValue2,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道3:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceStickingFilm.LightChannelValue3,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBlock Text="通道4:" Margin="5,5" FontSize="14"/>
+                        <TextBox Width="40" Text="{Binding Setting.CSLightSourceStickingFilm.LightChannelValue4,Mode=TwoWay}" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </WrapPanel>
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>
